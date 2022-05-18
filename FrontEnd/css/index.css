@@ -1,0 +1,159 @@
+body{
+    background-color: #F5F4F6;
+    padding: 0;
+    position: relative;
+}
+
+header{
+    background-color: #E6E7E8;
+    top:0;
+    left: 0;;
+    width: 100%;
+    position:fixed;
+}
+
+#logoMenu{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 45px;  
+}
+
+#logoMobile{
+    display: none;
+}
+
+#menu{
+    display: inline;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18pt;
+    position: relative;
+    left: 600px;
+    bottom: 30px;
+}
+
+#fazerLogin{
+    text-decoration: none;
+    color: black;
+}
+
+#fazerLogin:hover
+{
+    color:blue;
+}
+
+.botao{
+    border-radius: 10px;
+    background-color: #0B9DD6;
+    color:white;
+    height: 40px;
+    font-size: 18pt;
+    border:none;
+}
+
+#botaoMenu
+{
+    position: relative;
+    left: 60px;
+}
+
+.botao:hover{
+    background-color: #0c6589       ;
+}
+
+main{
+    position: fixed;
+    top:80px
+}
+
+#escritosMain{
+    display: inline;
+    color:black;
+}
+
+#escritosMain h1{
+    width: 400px;
+    position: relative;
+    left: 100px;
+    top: 200px;
+    font-family: Consolas, monaco, monospace;
+}
+
+#escritosMain h3{
+    width: 400px;
+    position: relative;
+    left: 100px;
+    top: 200px;
+    font-family: Bahnschrift;
+}
+
+#imagemLateral{
+    position: relative;
+    left: 700px;
+    height: 400px;
+    bottom: 160px;
+}
+
+#cadastreSe{
+    position: relative;
+    bottom: 150px;
+    right: 440px;
+    width: 350px;
+}
+
+/*-----------------------------RESPONSIVIDADE---------------------------------*/
+@media (max-width: 1000px)
+{
+   #logoMenu{
+       display: none;
+   } 
+
+   #logoMobile{
+       display: inline;
+       position: relative;
+       left: 20px;
+       top:20px;
+       margin-bottom: 30px;
+   }
+
+   #menu{
+       left:70px;
+       bottom: 40px;
+   }
+
+   #fazerLogin{
+       font-size: 11pt;
+   }
+
+   #botaoMenu{
+       font-size: 12px;
+       height: 30px;
+       left: 40px;
+   }
+
+   #escritosMain h1{
+       font-size: 30pt;
+       left: 5px;
+       width: 380px;
+       top:50px;
+   }
+
+   #escritosMain h3{
+       font-size: 20pt;
+       left:5px;
+       width: 380px;
+       top:60px
+   }
+
+   #imagemLateral{
+       display: none;
+   }
+
+   #cadastreSe{
+       display: relative;
+       left: 10px;
+       top:100px;
+       height: 70px;
+       font-size: 20pt;
+   }
+}
+

@@ -1,0 +1,86 @@
+body{
+    background-color: #4B4B4D;
+}
+
+#caixaBranca
+{
+    background-color: white;
+    position: absolute;
+    left: 780px;
+    top:0;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+
+#formularioCadastro
+{
+    background-color: #373435;
+    position: relative;
+    width: 60%;
+    left: 19%;
+    height: 62%;
+    border-radius: 40px;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.168);
+    text-align: center;
+}
+
+#titulo
+{
+    font-family: EngraversGothic BT;
+    font-size: 40pt;
+    position: relative;
+    top: -4%;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+#logoSemNome
+{
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    left: 405px;
+    top:100px;
+}
+
+#saturnoNome
+{
+    width: 30%;
+}
+
+#tituloForm
+{
+    font-family: tituloForm;
+    color: white;
+    font-size: 14pt;
+    position: relative;
+    top:7%;
+}
+
+.input{
+    display: block;
+    width: 70%;
+    position: relative;
+    left: 14%;
+    top: 10%;
+    height: 12%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+#botao
+{
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    top:80%;
+    right: 24%;
+    width: 50%;
+    height: 8%;
+    font-size: 15pt;
+    border-radius: 10px;
+}
+
