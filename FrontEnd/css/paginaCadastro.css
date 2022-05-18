@@ -97,7 +97,7 @@ body{
 }
 
 /*-----------------------------RESPONSIVIDADE---------------------------------*/
-@media (max-width: 1000px)
+@media (max-width: 400px)
 {
     body
     {
@@ -150,6 +150,81 @@ body{
         width: 96%;
         left: 2%;
         height: 480px;
+    }
+
+    #tituloForm
+    {
+        display: inline;
+        font-size: 150%;
+    }
+
+    .input{
+        margin-top: 8%;
+        width: 87.5%;
+        left: 5%;
+    }
+
+    #botao
+    {
+        width: 90%;
+        right: 5%;
+        height: 13%;
+    }
+}
+
+@media (max-width: 500px)
+{
+    body
+    {
+        background-color: white;
+    }
+
+    #logoSemNome
+    {
+        display: none;
+    }
+    
+    #botaoVoltar
+    {
+        display: none;
+    }
+
+    #botaoVoltarMobile
+    {
+        display: inline;
+        width: 4%;
+        position: relative;
+        top: 38px;
+        right: 40px;
+    }
+
+    #caixaBranca
+    {
+        position: relative;
+        left: 0%;
+        width: 100%;
+    }
+   
+    #titulo
+    {
+        font-size: 250%;
+    }
+
+    #saturnoNome
+    {
+        width: 50%;
+        position: absolute;
+        top: 35%;
+        z-index: 1;
+        right: 25%;
+    }    
+
+    #formularioCadastro
+    {
+        top:230px;
+        width: 96%;
+        left: 2%;
+        height: 520px;
     }
 
     #tituloForm
