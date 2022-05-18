@@ -157,7 +157,68 @@ main{
    }
 }
 
-@media (min-width: 401px) and (max-width: 500px)
+@media (min-width: 401px) and (max-width: 450px)
+{
+    #logoMenu{
+        display: none;
+    } 
+ 
+    #logoMobile{
+        display: inline;
+        position: relative;
+        left: 20px;
+        top:20px;
+        margin-bottom: 30px;
+    }
+ 
+    #menu{
+        left:170px;
+        bottom: 40px;
+    }
+ 
+    #fazerLogin{
+        font-size: 16pt;
+        position:absolute;
+        top:15%;
+        left: -100px;
+    }
+ 
+    #botaoMenu{
+        font-size: 16px;
+        height: 30px;
+        left: 40px;
+    }
+ 
+    #escritosMain h1{
+        font-size: 30pt;
+        left: 5px;
+        width: 100%;
+        top:70px;
+    }
+ 
+    #escritosMain h3{
+        font-size: 20pt;
+        left:5px;
+        width: 100%;
+        top:70px;
+    }
+ 
+    #imagemLateral{
+        display: none;
+    }
+ 
+    #cadastreSe{
+        display: relative;
+        left: 22px;
+        top:70px;
+        height: 70px;
+        font-size: 20pt;
+    }
+ }
+ 
+
+
+@media (min-width: 451px) and (max-width: 500px)
 {
     #logoMenu{
         display: none;
