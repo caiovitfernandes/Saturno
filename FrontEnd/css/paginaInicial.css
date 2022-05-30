@@ -1,0 +1,341 @@
+Header
+{
+    background-color: #373435;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+    height: 12%;
+}
+
+#logoSemNome
+{
+    position: fixed;
+    width: 7%;
+    z-index: 1;
+    top: 1%;
+    left: 2%;
+}
+
+#saturnoBranco
+{
+    position: fixed;
+    z-index: 1;
+    width: 20%;
+    left: 40%;
+    top: 1%;
+}
+
+#notificacao
+{
+    position: fixed;
+    right: 12%;
+}
+
+#notificacaoImg
+{
+    position: fixed;
+    width: 2.5%;
+    top:3%;
+}
+
+#notificacaoClick
+{
+    display: none;
+}
+
+#caixaNotificacao
+{
+    position: fixed;
+    top: 12.1%;
+    right: 10%;
+    display: none;
+    background-color: white;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.168);
+    width: 15%;
+    text-align: center;
+}
+
+.notificacoes
+{
+    font-family: Javanese Text;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.notificacoes:hover
+{
+    background-color: #37343585;
+    color: white;
+}
+
+#usuario
+{
+    position: fixed;
+    right: 8%;
+}
+
+#usuarioImg
+{
+    position: fixed;
+    width: 3.2%;
+    top:2%;
+}
+
+#usuarioClick
+{
+    display: none;
+}
+
+#caixaUsuario
+{
+    position: fixed;
+    top: 12.1%;
+    right: 6%;
+    display: none;
+    background-color: white;
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.168);
+    width: 15%;
+    text-align: center;
+}
+
+.opcoesUsuario
+{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-family: Javanese Text;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.opcoesUsuario:hover
+{
+    background-color: #37343585;
+    color: white;
+}
+
+#menu
+{
+    position: fixed;
+    left: 0;
+    top:12%;
+    height: 100%;
+    width: 20%;
+    background-color: #E6E7E8;
+    z-index: 1;
+}
+
+#menuImg
+{
+    position: fixed;
+    width: 2%;
+    left: 1%;
+    top: 15%;
+}
+
+#menuImg2
+{
+    position: relative;
+    width: 2%;
+    left: 1%;
+    top: 15%;
+    z-index: 4  ;
+}
+
+#botaoMenu
+{
+    display: none;
+}
+
+#listaTarefas
+{
+    position: fixed;
+    display: inline;
+    font-family: EngraversGothic BT;
+    font-weight: normal;
+    font-size: 140%;
+    left: 4.5%;
+}
+
+#maisImg
+{
+    position: fixed;
+    width: 2%;
+    left: 17%;
+    top: 15%;
+}
+
+#botaoMais
+{
+    display: none;
+}
+
+.lista
+{
+    position: fixed;
+    top: 22%;
+    width: 20%;
+    height: 100%;
+}
+
+.nomeLista
+{
+    position: relative;
+    height: 8%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+    font-family: Javanese Text;
+    font-weight: normal;
+}
+
+/*Essa cor vai ser atribuida somente a lista selecionada*/
+#Selected
+{
+    background-color: #D2D3D5;
+}
+
+#tituloLista
+{
+    position: fixed;
+    left: 0%;
+    font-family: EngraversGothic BT;
+    font-weight: normal;
+    font-size: 120%;
+    border: 1px solid rgba(209, 209, 209, 0.575);
+    height: 12.2%;
+    width: 100%;
+    padding-left: 22%;
+    z-index: 0;
+    top: 9.5%;
+    background-color: white;
+}
+
+#inputTarefa
+{
+    position: fixed;
+    top:25%;
+    left: 21%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    width: 50%;
+    outline: none;
+    font-family: Javanese Text;
+    font-size: 100%;
+}
+
+
+#calendario
+{
+    position: fixed;
+    top:25%;
+    left: 70%;
+    z-index: 0 ;
+    width: 2.8%;
+    border:none;
+    outline: none;
+    font-size: 300%;
+}
+
+#aparecerData
+{
+    position: fixed;
+    top:27%;
+    left: 72%;
+    font-family: Javanese Text;
+    font-size: 70%;
+}
+
+#notificacaoTarefaImg
+{
+    position: fixed;
+    z-index: 1;
+    left:74%;
+    Top:26%;
+    width: 2.2%;
+}
+
+#notificacaoClicadaImg
+{
+    position: fixed;
+    left:74%;
+    Top:26%;
+    width: 2.2%;
+}
+
+#tarefas
+{
+    position: relative;
+    margin-top: 15%;
+    margin-left: 20%;
+    z-index: -1;
+}
+
+.tarefa
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.179);
+    padding-top: 1%;
+}
+
+#concluidaImg
+{
+    width: 3%;
+    margin-left: 1%;
+    display: inline;
+}
+
+#concluida
+{
+    display: none;
+}
+
+.tituloTarefa
+{
+    display: inline;
+    font-family: Javanese Text;   
+    margin-left: 2%;
+    padding-top: 0;
+    font-size: 120%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#lixeira
+{
+    width: 2.5%;
+    margin-left: 83%;
+}
+
+#calendarioTarefa
+{
+    width: 1.5%;
+    display: inline;
+    margin-left: 6.5%;
+    margin-top: 0px;   
+}
+
+.atributosTarefa
+{
+    display: inline;
+}
+
+#notificacaoTarefa
+{
+    width: 1.5%;
+    display: inline;
+    margin-left: 2%;
+    margin-top: 0px; 
+}

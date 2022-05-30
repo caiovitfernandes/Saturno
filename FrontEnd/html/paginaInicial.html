@@ -1,12 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    asdasd
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/Saturno/FrontEnd/imagens/favicon.png">
+        <link rel="stylesheet" href="/Saturno/FrontEnd/css/paginaInicial.css">
+        <title>Suas tarefas</title>
+    </head>
+
+    <body>
+        <header>
+            <img src="/Saturno/FrontEnd/imagens/logoSemNome.png" id="logoSemNome">
+
+            <img src="/Saturno/FrontEnd/imagens/saturnoBranco.png" id="saturnoBranco">
+
+            <nav id="menuHeader">
+                <div id="notificacao">
+                    <label for="notificacaoClick">
+                        <img src="/Saturno/FrontEnd/imagens/notificacao.png" id="notificacaoImg">
+                    </label>
+
+                    <input type="checkbox" id="notificacaoClick" oninput="mostrarCaixaNotificacao()">
+
+                    <div id="caixaNotificacao">
+                        <!--Esse é um modelo de como devem aparecer as notificações-->
+                        <p class="notificacoes">Tarefa 1 - 11-1-2001</p>
+                        <p class="notificacoes">Tarefa 2 - Concluída</p>
+                    </div>
+                </div>
+            
+                <div id="usuario">
+                    <label for="usuarioClick">
+                        <img src="/Saturno/FrontEnd/imagens/usuario.png" id="usuarioImg">
+                    </label>
+
+                    <input type="checkbox" id="usuarioClick" oninput="mostrarCaixaUsuario()">
+
+                    <div id="caixaUsuario">
+                        <a href="/Saturno/FrontEnd/html/configuracoes.html" class="opcoesUsuario">Configurações</a>
+
+                        <!--Implementar a função de logout-->
+                        <a href="/Saturno/FrontEnd/html/index.html" class="opcoesUsuario">Sair</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main onclick="fechaToggles()">
+            <div id="menu">
+                <label for="botaoMenu">
+                    <img src="/Saturno/FrontEnd/imagens/menu.png" id="menuImg">
+                </label>
+                <input type="checkbox" id="botaoMenu" oninput="fechaMenu()">
+
+                <h2 id="listaTarefas">Lista de tarefas</h2>
+
+                <label for="botaoMais">
+                    <img src="/Saturno/FrontEnd/imagens/mais.png" id="maisImg">
+                </label>
+                <input type="checkbox" id="botaoMais">
+
+                <!--Esse é um exemplo de como uma lista deve aparecer no menu. As listas serão buscadas no BD-->
+                <div class="lista">
+                    <h3 class="nomeLista" id="Selected">Lista 1</h3>
+
+                    <!--Essa lista de concluídas deve ficar em último lugar das listas-->
+                    <h3 class="nomeLista">Concluídas</h3>
+                </div>
+            </div>
+
+            <div id="tituloECriacao">
+                <img src="/Saturno/FrontEnd/imagens/menu.png" id="menuImg2" onclick="abreMenu()">
+
+                <div id="tituloLista">
+                    <h1 id="tituloListaH1">Lista 1</h1>
+                </div>
+
+                <input type="text" placeholder="Descreva a nova tarefa" id="inputTarefa">
+
+                <div id="aparecerData"></div>
+
+                <input type="date" id="calendario" onchange="mostraData()">
+
+                <label for="notificacaoTarefa">
+                    <img src="/Saturno/FrontEnd/imagens/notificacaoTarefa.png" id="notificacaoTarefaImg">
+                    <img src="/Saturno/FrontEnd/imagens/notificacaoClicada.png" id="notificacaoClicadaImg">
+                </label>
+                <input type="checkbox" id="notificacaoTarefa" onchange="marcarNotificacao()">
+            </div>
+
+            <div id="tarefas">
+                 <!--Esse é um exemplo de como uma tarefa vai aparecer. As tarefas serão puxadas da respectiva lista no BD-->
+                <div class="tarefa">
+                    <label for="concluida">
+                        <img src="/Saturno/FrontEnd/imagens/concluida.png" id="concluidaImg">
+                    </label>
+                    <input type="checkbox" id="concluida">
+
+                    <h3 class="tituloTarefa">Tarefa 1</h3>
+
+                    <img src="/Saturno/FrontEnd/imagens/lixeira.png" id="lixeira"><br>
+
+                    <img src="/Saturno/FrontEnd/imagens/calendario.png" id="calendarioTarefa">
+                    <h6 class="atributosTarefa">11-1-2001</h6>
+
+                    <img src="/Saturno/FrontEnd/imagens/notificacaoTarefa.png" id="notificacaoTarefa">
+                    <h6 class="atributosTarefa">1 dia antes</h6>
+                </div>
+            </div>
+        </main>
+
+        <script src="/Saturno/FrontEnd/javascript/paginaIncial.js"></script>
+    </body>
 </html>
