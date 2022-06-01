@@ -31,7 +31,7 @@ body{
     position: relative;
     width: 60%;
     left: 19%;
-    height: 62%;
+    height: 67%;
     border-radius: 40px;
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.168);
     text-align: center;
@@ -77,9 +77,35 @@ body{
     position: relative;
     left: 14%;
     top: 10%;
-    height: 12%;
-    margin-bottom: 5%;
+    height: 7%;
+    margin-bottom: 3%;
     border-radius: 10px;
+}
+
+#genero
+{
+    display: block;
+    width: 70%;
+    position: relative;
+    left: 14%;
+    top: 10%;
+    height: 7%;
+    margin-bottom: 3%;
+    border-radius: 10px;
+}
+
+.tituloInput
+{
+    color: #4b4b4dbe;
+    position: fixed;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    left: 80%;
+    top:59.5%;
+    font-size: 60%;
+    z-index: 2;
+    font-weight: normal;
 }
 
 #botao
@@ -164,11 +190,24 @@ body{
         left: 5%;
     }
 
+    #genero
+    {
+        margin-top: 8%;
+        width: 87.5%;
+        left: 5%;
+    }
+
     #botao
     {
         width: 90%;
         right: 5%;
-        height: 13%;
+        height: 8%;
+        top:87%;
+    }
+
+    .tituloInput
+    {
+        display: none;
     }
 }
 
@@ -177,7 +216,7 @@ body{
     body
     {
         background-color: white;
-    }
+    } 
 
     #logoSemNome
     {
@@ -239,11 +278,24 @@ body{
         left: 5%;
     }
 
+    #genero
+    {
+        margin-top: 8%;
+        width: 87.5%;
+        left: 5%;
+    }
+
     #botao
     {
         width: 90%;
         right: 5%;
-        height: 13%;
+        height: 8%;
+        top:87%;
+    }
+
+    .tituloInput
+    {
+        display: none;
     }
 }
 
@@ -314,10 +366,23 @@ body{
         left: 5%;
     }
 
+    #genero
+    {
+        margin-top: 8%;
+        width: 87.5%;
+        left: 5%;
+    }
+
     #botao
     {
         width: 90%;
         right: 5%;
-        height: 13%;
+        height: 8%;
+        top:87%;
+    }
+
+    .tituloInput
+    {
+        display: none;
     }
 }
