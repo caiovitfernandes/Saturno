@@ -339,3 +339,144 @@ Header
     margin-left: 2%;
     margin-top: 0px; 
 }
+
+/*------------------------ RESPONSIVIDADE ----------------------*/
+@media (max-width: 500px)
+{
+    header
+    {
+        height: 10%;;
+    }
+
+    #logoSemNome
+    {
+        width: 20%;
+        top:2%;
+    }
+
+    #saturnoBranco
+    {
+        display: none;
+    }
+
+    #notificacaoImg
+    {
+        width: 10%;
+        left: 45%;
+        top:2.5%;
+    }
+
+    #caixaNotificacao
+    {
+        left: 0%;
+        top:10%;
+        width: 100%;
+    }
+
+    #usuarioImg
+    {
+        width: 12%;
+        left: 85%;
+        top:2%;
+    }
+
+    #caixaUsuario
+    {
+        left: 0%;
+        top:10%;
+        width: 100%;
+    }
+
+    #menu
+    {
+        width: 100%;
+        top:10%;
+        z-index: 5;
+    }
+
+    #menuImg
+    {
+        width: 7%;
+    }
+
+    #listaTarefas
+    {
+        font-size: 220%;
+        left: 18%;
+        top:11%;
+    }
+
+    #maisImg
+    {
+        width: 7%;
+        left: 90%;
+    }
+
+    .lista
+    {
+        width: 100%;
+    }
+
+    .nomeLista
+    {
+        width: 100%;
+        padding-top: 5%;
+        font-size: 150%;
+    }
+
+    #menuImg2
+    {
+        width: 7%;
+    }
+
+    #tituloLista
+    {
+        text-align: center;
+        margin-top: 2%;
+        padding: 0;
+    }
+
+    #aparecerData
+    {
+        top:28%;
+        left: 73%;
+    }
+
+    #calendario
+    {
+        font-size: 150%;
+        width: 6%;
+       top:25.5%;
+    }
+
+    #notificacaoTarefaImg
+    {
+        width: 5%;
+        margin-left: 10%;
+    }
+    
+    #notificacaoClicadaImg
+    {
+        width: 5%;
+        margin-left: 10%;
+    }
+
+    #tarefas
+    {
+        margin-top: 60%;
+    }
+
+    #concluidaImg
+    {
+        width: 7%;
+        padding-top: 1%;
+        left: 10px;
+    }
+    
+    #lixeira
+    {
+        width: 5%;
+        display: inline;
+        margin-left: 60%;
+    }
+}
