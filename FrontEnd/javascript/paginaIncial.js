@@ -108,4 +108,12 @@ function marcarNotificacao()
     }
 }
 
+function tarefasDoUsuario()
+{
+    fetch(`http://localhost:6789/getTarefas`).then((resposta) => {
+        return resposta.text();
+    }).then((tarefa) => {
+        console.log(tarefa);       
+    })
+}
 
