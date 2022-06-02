@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Saturno</title>
-        <link rel="icon" href="/Saturno/FrontEnd/imagens/favicon.png">
-        <link rel="stylesheet" href="/Saturno/FrontEnd/css/paginaLogin.css">
+        <link rel="icon" href="/Saturno-Back/WS03ProdutoService3/src/main/resourses/imagens/favicon.png">
+        <link rel="stylesheet" href="/Saturno-Back/WS03ProdutoService3/src/main/resourses/css/paginaLogin.css">
     </head>
 
     <body>
@@ -18,13 +18,13 @@
 
                 <img src="/Saturno/FrontEnd/imagens/saturnoNome.png" id="saturnoNome">
 
-                <form id="formularioCadastro">
+                <form id="formularioCadastro" method="post">
                     <a href="index.html"><img src="/Saturno/FrontEnd/imagens/botaoVoltar.png" id="botaoVoltarMobile"></a>
                     <p id="tituloForm">Acesse sua conta:</p>
                     
-                    <input type="email" class="input" placeholder="Email">
+                    <input name="email" id="email_login" type="email" class="input" placeholder="Email">
 
-                    <input type="password" class="input" placeholder="Senha">
+                    <input name="senha" id="senha_login" type="password" class="input" placeholder="Senha">
 
                     <button type="button" id="botao" onclick="entrar()">Fazer Login</button>
 

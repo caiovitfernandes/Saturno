@@ -20,27 +20,24 @@
 
                 <form id="formularioCadastro">
                     <a href="index.html"><img src="/Saturno/FrontEnd/imagens/botaoVoltar.png" id="botaoVoltarMobile"></a>
-                    <p id="tituloForm">Crie seu usuário:</p> 
-                    
-                    <input type="text" class="input" placeholder="Como você quer ser chamado?">
+                    <p id="tituloForm">Crie seu usuário:</p>
 
-                   <select id="genero" placeholder="Gênero">
-                       <option value="M">Masculino</option>
-                       <option value="F">Feminino</option>
-                   </select>
-                    
+                    <input id="genero_cadastro" type="text" class="input" placeholder="Genêro">
+                     
                     <h3 class="tituloInput">Data de nascimento:</h3>
-                    <input type="date" class="input">
+                    <input id="data_cadastro" type="date" class="input">
+                    
+                    <input id="login_cadastro" type="text" class="input" placeholder="Como você quer ser chamado?">
 
-                    <input type="email" class="input" placeholder="Email">
+                    <input id="email_cadastro" type="email" class="input" placeholder="Email">
 
-                    <input type="password" class="input" placeholder="Nova Senha">
+                    <input id="senha_cadastro" type="password" class="input" placeholder="Nova Senha">
 
-                    <button type="button" id="botao" onclick="entrar()">Continuar</button>
+                    <button type="button" id="botao" onclick="salvaLogin()">Continuar</button>
                 </form>
             </div>
         </main>
 
-        <script href="/Saturno/FrontEnd/javascript/paginaCadastro.js"></script>
+        <script src="/Saturno/FrontEnd/javascript/paginaCadastro.js"></script>
     </body>
 </html>
