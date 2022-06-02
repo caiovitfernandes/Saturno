@@ -38,6 +38,8 @@ public class Aplicacao {
         
         get("/getTarefasUsuario/:id", (request, response) -> service.getTarefabyUserId(request, response));
         
-        get("/logOut", (request, response) -> service.logOut());             
+        get("/logOut", (request, response) -> service.logOut());  
+        
+        get("/getTarefas", (request, response) -> service.getTarefabyUserId(request, response));
     }
 }
