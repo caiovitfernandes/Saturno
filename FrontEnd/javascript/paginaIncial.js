@@ -107,3 +107,5 @@ function marcarNotificacao()
         document.getElementById('notificacaoTarefaImg').style.display = 'inline';
     }
 }
+
+
