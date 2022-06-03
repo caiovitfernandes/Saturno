@@ -53,7 +53,7 @@ function salvaLogin() {
 }
 
 function addUser(id, login, email, senha, data, genero) {
-    fetch(`http://localhost:6789/inserirUsuario/${id}/${login}/${email}/${senha}/${genero}/${data}`);
+    fetch(`http://localhost:6700/inserirUsuario/${id}/${login}/${email}/${senha}/${genero}/${data}`);
     alert("Usuário criado com sucesso");
     window.location.href = "/Saturno/FrontEnd/html/paginaLogin.html";
 }

@@ -8,7 +8,7 @@ function entrar() {
 }
 
 function confereLogin(email, senha) {
-    fetch(`http://localhost:6789/login/${email}/${senha}`).then((resposta) => 
+    fetch(`http://localhost:6700/login/${email}/${senha}`).then((resposta) => 
     {
         return resposta.text();
     }).then((algo) => { 

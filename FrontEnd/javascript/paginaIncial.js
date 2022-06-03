@@ -111,32 +111,32 @@ function marcarNotificacao()
 
 function mostrarTarefas()
 {
-    fetch(`http://localhost:6789/getTarefas`).then((resposta) => {
+    fetch(`http://localhost:6700/getTarefas`).then((resposta) => {
         return resposta.json();
     }).then((retorno) => {
-        let parcial = document.createElement('div');
+        var parcial = document.createElement('div');
         parcial.setAttribute('id', 'tarefas');
         
-        for(i = 0; i < resposta.length; i++)
+        for(i = 0; i < retorno.length; i++)
         {
-            let tarefa = document.createElement('div');
+            var tarefa = document.createElement('div');
             tarefa.setAttribute('class', 'tarefa');
 
-            let label = document.createElement('label').setAttribute('for', 'concluida');
+            var label = document.createElement('label').setAttribute('for', 'concluida');
 
-            let concluidaImg = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/concluida.png').setAttribute('id', 'concluidaImg');
+            var concluidaImg = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/concluida.png').setAttribute('id', 'concluidaImg');
 
             label.appendChild(concluidaImg);
 
-            let concluida = document.createElement('input').setAttribute('type', 'checkbox').setAttribute('id', 'concluida');
+            var concluida = document.createElement('input').setAttribute('type', 'checkbox').setAttribute('id', 'concluida');
 
-            let tituloTarefa = document.createElement('h3').setAttribute('class', 'tituloTarefa');
+            var tituloTarefa = document.createElement('h3').setAttribute('class', 'tituloTarefa');
 
             tituloTarefa.innerText = retorno[i].Titulo;
 
-            let calendarioTarefa = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/calendario.png').setAttribute('id', 'calendarioTarefa');
+            var calendarioTarefa = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/calendario.png').setAttribute('id', 'calendarioTarefa');
 
-            let dataTarefa = document.createElement('h6').setAttribute('class', 'atributosTarefa');
+            var dataTarefa = document.createElement('h6').setAttribute('class', 'atributosTarefa');
 
             dataTarefa.innerText = retorno[i].Data;
 
@@ -197,5 +197,5 @@ function adicionarTarefa()
         dataFinal = '';
     }
 
-    fetch(`http://localhost:6789/inserirTarefa/${id}/${nome}/${dataFinal}`);
+    fetch(`http://localhost:6700/inserirTarefa/${id}/${nome}/${dataFinal}`);
 }
