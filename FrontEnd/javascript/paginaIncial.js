@@ -214,7 +214,7 @@ function adicionarTarefa()
 
     fetch(`http://localhost:6700/inserirTarefa/${id}/${nome}/${dataFinal}`);
 
-    mostrarTarefas();
+
 }
 
 function excluirTarefa(id)
