@@ -340,6 +340,12 @@ Header
     margin-top: 0px; 
 }
 
+#maisImgTarefa
+{
+    margin-top: 13%;
+    margin-left: 72%;
+}
+
 /*------------------------ RESPONSIVIDADE ----------------------*/
 @media (max-width: 500px)
 {

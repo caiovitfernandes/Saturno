@@ -11,7 +11,7 @@ function confereLogin(email, senha) {
     fetch(`http://localhost:6789/login/${email}/${senha}`).then((resposta) => 
     {
         return resposta.text();
-    }).then((algo) => {
+    }).then((algo) => { 
         console.log(algo);
         if(algo == "Sim"){
             window.location.href = "a.html";

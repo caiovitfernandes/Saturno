@@ -57,14 +57,14 @@ function mostraData()
 {
     data = document.getElementById('calendario').value;
 
-    var array = [];
+    let array = [];
     array = data.split("-");
 
-    var dataFinal;
+    let dataFinal;
 
     if(data != '')
     {
-        var organizado = [];
+        let organizado = [];
         for(i = 0, j = 2; j >= 0; j--, i++)
         {
             organizado[i] = array[j];
@@ -77,7 +77,6 @@ function mostraData()
         dataFinal = '';
     }
     
-    console.log(dataFinal);
 
     document.getElementById('aparecerData').innerText = dataFinal;
 
@@ -86,12 +85,14 @@ function mostraData()
         document.getElementById('calendario').style.left = '76%';
         document.getElementById('notificacaoTarefaImg').style.left = '80%';
         document.getElementById('notificacaoClicadaImg').style.left = '80%';
+        document.getElementById('maisImgTarefa').style.marginLeft = '78%';
     }
     else
     {
         document.getElementById('calendario').style.left = '70%';
         document.getElementById('notificacaoTarefaImg').style.left = '74%';
         document.getElementById('notificacaoClicadaImg').style.left = '74%';
+        document.getElementById('maisImgTarefa').style.marginLeft = '72%';
     }
 }
 
@@ -108,12 +109,56 @@ function marcarNotificacao()
     }
 }
 
-function tarefasDoUsuario()
+function mostrarTarefas()
 {
-    fetch(`http://localhost:6789/getTarefas`).then((resposta) => {
+    fetch(`http://localhost:6789/getTarefas/`).then((resposta) => {
         return resposta.text();
     }).then((tarefa) => {
         console.log(tarefa);       
     })
 }
 
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();
+    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;
+        if(d > 0){
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+
+
+function adicionarTarefa()
+{
+    let id = generateUUID();
+    let nome = document.getElementById('inputTarefa').value;
+    let dataLimite = document.getElementById('calendario').value;
+
+    let array = [];
+    array = dataLimite.split("-");
+    let dataFinal;
+
+    if(dataLimite != '')
+    {
+        let organizado = [];
+        for(i = 0, j = 2; j >= 0; j--, i++)
+        {
+            organizado[i] = array[j];
+        }
+
+        dataFinal = organizado.join('-');
+    }
+    else
+    {
+        dataFinal = '';
+    }
+
+    fetch(`http://localhost:6789/inserirTarefa/${id}/${nome}/${dataFinal}`);
+}

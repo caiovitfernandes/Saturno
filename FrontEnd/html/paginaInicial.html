@@ -13,7 +13,7 @@
 
     </head>
 
-    <body>
+    <body onload="mostrarTarefas()">
         <header>
             <img src="/Saturno/FrontEnd/imagens/logoSemNome.png" id="logoSemNome">
 
@@ -135,6 +135,8 @@
                     <img src="/Saturno/FrontEnd/imagens/notificacaoClicada.png" id="notificacaoClicadaImg">
                 </label>
                 <input type="checkbox" id="notificacaoTarefa" onchange="marcarNotificacao()">
+
+                <img src="/Saturno/FrontEnd/imagens/mais.png" id="maisImgTarefa" onclick="adicionarTarefa()">
             </div>
 
             <div id="tarefas">
