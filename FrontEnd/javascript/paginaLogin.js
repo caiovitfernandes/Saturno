@@ -1,17 +1,17 @@
 function entrar() {
     let email = document.getElementById("email_login").value;
 
-    if(email.charAt(0) == '\'')
+    if(!email.includes("\'"))
     {
-        alert("Hoje não kkkkkkk");
-    }
-    else{
         let senha = document.getElementById("senha_login").value;
         if (email == "" || senha == "") {
             alert("Não deixe nenhum campo em branco!");
         }
         confereLogin(email, senha);
-    }  
+    } 
+    else{
+        alert("Vc é um viadão");
+    } 
 }
 
 function confereLogin(email, senha) {
