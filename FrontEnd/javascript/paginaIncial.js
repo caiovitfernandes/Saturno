@@ -214,7 +214,10 @@ function adicionarTarefa()
 
     fetch(`http://localhost:6700/inserirTarefa/${id}/${nome}/${dataFinal}`);
 
-
+    mostrarTarefas();
+    
+    nome.value = '';
+    dataLimite.value = '';
 }
 
 function excluirTarefa(id)
