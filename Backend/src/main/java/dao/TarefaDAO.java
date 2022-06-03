@@ -25,9 +25,8 @@ public class TarefaDAO extends DAO {
 	public boolean insert(Tarefa tarefa) {
 		boolean status = false;
 		try {
-			String sql = "INSERT INTO tarefa (id, descricao, data_Limite, nome, idUsuario) "
-		               + "VALUES (" + tarefa.getId() + ", '"
-		               + tarefa.getDescricao() + "', '" + tarefa.getDataLimite() + "', '" + tarefa.getNome() + "', '" + tarefa.getIdUsuario() + "');";
+			String sql = "INSERT INTO tarefa (id, data_Limite, nome, idUsuario) "
+		               + "VALUES (" + tarefa.getId() + ", '" + tarefa.getDataLimite() + "', '" + tarefa.getNome() + "', '" + tarefa.getIdUsuario() + "');";
 			System.out.println(sql);
 			PreparedStatement st = conexao.prepareStatement(sql);
 			st.executeUpdate();
@@ -48,7 +47,7 @@ public class TarefaDAO extends DAO {
 			String sql = "SELECT * FROM tarefa WHERE id="+id;
 			ResultSet rs = st.executeQuery(sql);	
 	        if(rs.next()){            
-	        	 tarefa = new Tarefa(rs.getInt("id"), rs.getString("descricao"), rs.getString("data_limite"), 
+	        	 tarefa = new Tarefa(rs.getString("id"), rs.getString("data_limite"), 
 	                				   rs.getString("nome"), 
 	        			               rs.getString("idUsuario"));
 	        }
@@ -91,7 +90,7 @@ public class TarefaDAO extends DAO {
 			String sql = "SELECT * FROM tarefa" + ((orderBy.trim().length() == 0) ? "" : (" ORDER BY " + orderBy));
 			ResultSet rs = st.executeQuery(sql);	           
 	        while(rs.next()) {	            	
-	        	Tarefa t = new Tarefa(rs.getInt("id"), rs.getString("descricao"), rs.getString("data_limite"), 
+	        	Tarefa t = new Tarefa(rs.getString("id"), rs.getString("data_limite"), 
      				   rs.getString("nome"), 
 		               rs.getString("idUsuario"));
 	            usuarios.add(t);
@@ -111,7 +110,7 @@ public class TarefaDAO extends DAO {
 			String sql = "SELECT * FROM tarefa WHERE idusuario='"+userId+"'";
 			ResultSet rs = st.executeQuery(sql);	           
 	        while(rs.next()) {	            	
-	        	Tarefa t = new Tarefa(rs.getInt("id"), rs.getString("descricao"), rs.getString("data_limite"), 
+	        	Tarefa t = new Tarefa(rs.getString("id"), rs.getString("data_limite"), 
      				   rs.getString("nome"), 
 		               rs.getString("idUsuario"));
 	            tarefas.add(t);
@@ -128,7 +127,6 @@ public class TarefaDAO extends DAO {
 		boolean status = false;
 		try {  
 			String sql = "UPDATE tarefa SET id = '" + tarefa.getId() + "', "
-					   + "descricao = " + tarefa.getDescricao() + ", " 
 					   + "dataLimite = " + tarefa.getDataLimite() + ","
 					   + "nome = " + tarefa.getNome() + ","
 					   + "idUsuario = " + tarefa.getIdUsuario() + ","

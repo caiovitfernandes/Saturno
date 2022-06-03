@@ -5,43 +5,32 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Tarefa {
-	private int id;
-	private String descricao;
+	private String id;
 	private Date dataLimite;
 	private String nome;
 	private String idUsuario;
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 	
 	public Tarefa() throws ParseException {
-		id = -1;
-		descricao = "?";
+		id = "-1";
 		dataLimite = sdf.parse("01/01/1900");
 		nome = "?";
 		idUsuario = "-1";
 	}
 
-	public Tarefa(int id, String descricao, String dataLimite, String nome, String idUsuario) throws ParseException {
+	public Tarefa(String id, String dataLimite, String nome, String idUsuario) throws ParseException {
 		this.setId(id);
-		this.setDescricao(descricao);
 		this.setDataLimite(dataLimite);
 		this.setNome(nome);
 		this.setIdUsuario(idUsuario);
 	}		
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
-	}
-	
-	public String getDescricao() {
-		return descricao;
-	}
-	
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
 	}
 	
 	public String getDataLimite() {
@@ -70,7 +59,7 @@ public class Tarefa {
 	
 
 	public String toString() {
-		return "Id: " + getId() + " Nome: "+ getNome() + " Descrição: " + getDescricao() + " Data Limite: " + getDataLimite() + " Id Usuario: " + getIdUsuario();
+		return "Id: " + getId() + " Nome: "+ getNome() + " Data Limite: " + getDataLimite() + " Id Usuario: " + getIdUsuario();
 	}
 	
 	public boolean equals(Object obj) {

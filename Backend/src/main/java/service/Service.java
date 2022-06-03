@@ -94,13 +94,12 @@ public class Service {
 	}
 	
 	public boolean insertTarefa(Request request, Response response) throws ParseException {
-			int id = Integer.parseInt(request.params(":id"));
-			String descricao = request.params(":descricao");
+			String id = request.params(":id");
 			String data_limite = request.params(":data_limite");
 			String nome = request.params(":nome");
-			String idUsuario = request.params(":idusuario");
+			String idUsuario = usuarioCorrente.getId();
 			
-			Tarefa tarefa = new Tarefa(id, descricao, data_limite, nome, idUsuario);
+			Tarefa tarefa = new Tarefa(id, data_limite, nome, idUsuario);
 			
 			boolean resp = tarefaDAO.insert(tarefa);
 			
@@ -108,13 +107,12 @@ public class Service {
 	}
 	
 	public boolean updateTarefa(Request request, Response response) throws ParseException {
-		int id = Integer.parseInt(request.params(":id"));
-		String descricao = request.params(":descricao");
+		String id = request.params(":id");
 		String data_limite = request.params(":data_limite");
 		String nome = request.params(":nome");
-		String idUsuario = request.params(":idusuario");
+		String idUsuario = usuarioCorrente.getId();
 		
-		Tarefa tarefa = new Tarefa(id, descricao, data_limite, nome, idUsuario);
+		Tarefa tarefa = new Tarefa(id, data_limite, nome, idUsuario);
 		
 		boolean resp = tarefaDAO.update(tarefa);
 		
@@ -128,7 +126,7 @@ public class Service {
 	}
 	
 	public String getTarefabyUserId(Request request, Response response) {
-		List<Tarefa> tarefas = tarefaDAO.getByUser(request.params(":id"));
+		List<Tarefa> tarefas = tarefaDAO.getByUser(request.params(usuarioCorrente.getId()));
 		
 		JSONArray tarefasJSON = new JSONArray();
 		
@@ -137,7 +135,6 @@ public class Service {
 			JSONObject JsonObj = new JSONObject();
 			JsonObj.put("Id: ", i+1);
 			JsonObj.put("Titulo: ", t.getNome());
-			JsonObj.put("Descrição: ", t.getDescricao());
 			JsonObj.put("Data Limite: ", t.getDataLimite());
 			
 			tarefasJSON.add(JsonObj);
@@ -150,14 +147,14 @@ public class Service {
 	public String login(Request request, Response response) throws ParseException, NoSuchAlgorithmException {
 		String senha = request.params(":senha");
 		String email = request.params(":email");
-		usuarioCorrente  = usuarioDAO.Login(email, senha);
+		usuarioCorrente  = usuarioDAO.Login(email, criptografar(senha));
 		System.out.println(usuarioCorrente);
 		
 		if(usuarioCorrente != null) {
 			return "Sim";
 		}
 		else {
-			return "Não";
+			return "NÃ£o";
 		}
 	}
 	

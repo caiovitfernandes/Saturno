@@ -28,9 +28,9 @@ public class Aplicacao {
         
         get("/deletarUsuario/:id", (request, response) -> service.deleteUsuario(request, response));
         
-        get("/inserirTarefa/:id/:nome/:descricao/:data_limite/:idusuario", (request, response) -> service.insertTarefa(request, response));
+        get("/inserirTarefa/:id/:nome/:data_limite", (request, response) -> service.insertTarefa(request, response));
         
-        get("/updateTarefa/:id/:nome/:descricao/:data_limite/:idusuario", (request, response) -> service.updateTarefa(request, response));
+        get("/updateTarefa/:id/:nome/:data_limite", (request, response) -> service.updateTarefa(request, response));
         
         get("/deletarTarefa/:id", (request, response) -> service.deleteTarefa(request, response));
         
@@ -38,7 +38,7 @@ public class Aplicacao {
         
         get("/getTarefasUsuario/:id", (request, response) -> service.getTarefabyUserId(request, response));
         
-        get("/logOut", (request, response) -> service.logOut());  
+        get("/logOut", (request, response) -> service.logOut());        
         
         get("/getTarefas", (request, response) -> service.getTarefabyUserId(request, response));
     }
