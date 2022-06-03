@@ -197,10 +197,12 @@ Header
 }
 
 
-#maisImgTarefa
+#desaparecer
 {
     margin-top: 13%;
     margin-left: 80%;
+    background-color: white;
+    border: none;
 }
 
 /*------------------------ RESPONSIVIDADE ----------------------*/
