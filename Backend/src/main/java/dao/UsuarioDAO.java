@@ -67,7 +67,8 @@ public class UsuarioDAO extends DAO {
 		
 		try {
 			Statement st = conexao.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE email='" + email + "' AND senha='" + senha + "';");	
+			String sql = "SELECT * FROM usuario WHERE email='" + email + "' AND senha='" + senha + "';";
+			ResultSet rs = st.executeQuery(sql);
 	        if(rs.next()){            
 	        	 usuario = new Usuario(rs.getString("id"), rs.getString("nome"), 
 	                				   rs.getString("senha"), 
@@ -161,7 +162,7 @@ public class UsuarioDAO extends DAO {
 		boolean status = false;
 		try {  
 			Statement st = conexao.createStatement();
-			st.executeUpdate("DELETE FROM usuario WHERE id = " + id);
+			st.executeUpdate("DELETE FROM usuario WHERE id = '" + id+"'");
 			st.close();
 			status = true;
 		} catch (SQLException u) {  

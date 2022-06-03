@@ -121,7 +121,7 @@ public class Service {
 	
 	public boolean deleteTarefa(Request request, Response response) {
 		String id = request.params(":id");
-		Boolean resp = usuarioDAO.delete(id);
+		Boolean resp = tarefaDAO.delete(id);
 		return resp;
 	}
 	
@@ -154,7 +154,7 @@ public class Service {
 			return "Sim";
 		}
 		else {
-			return "NÃ£o";
+			return "Não";
 		}
 	}
 	

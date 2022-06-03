@@ -142,11 +142,11 @@ public class TarefaDAO extends DAO {
 	}
 	
 	
-	public boolean delete(int id) {
+	public boolean delete(String id) {
 		boolean status = false;
 		try {  
 			Statement st = conexao.createStatement();
-			st.executeUpdate("DELETE FROM tarefa WHERE id = " + id);
+			st.executeUpdate("DELETE FROM tarefa WHERE id = '" + id+"'");
 			st.close();
 			status = true;
 		} catch (SQLException u) {  

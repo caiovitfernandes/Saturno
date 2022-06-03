@@ -4,8 +4,6 @@ import static spark.Spark.*;
 
 import java.text.ParseException;
 
-import dao.UsuarioDAO;
-import model.Usuario;
 import spark.*;
 import service.Service;
 
@@ -15,7 +13,7 @@ public class Aplicacao {
 	private static Service service = new Service();
 	
     public static void main(String[] args) throws ParseException {
-        port(6789);
+        port(6700);
         after((Filter) (request,response) -> {
 			response.header("Access-Control-Allow-Origin","*");
 			response.header("Access-Control-Allow-Methods", "GET");
