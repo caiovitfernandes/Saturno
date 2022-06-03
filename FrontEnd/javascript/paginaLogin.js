@@ -14,7 +14,7 @@ function confereLogin(email, senha) {
     }).then((algo) => { 
         console.log(algo);
         if(algo == "Sim"){
-            window.location.href = "a.html";
+            window.location.href = "/Saturno/FrontEnd/html/paginaInicial.html";
         }
         else{
             alert("Usuario ou senha incorretos");

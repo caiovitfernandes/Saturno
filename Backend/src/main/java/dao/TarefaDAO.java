@@ -26,7 +26,7 @@ public class TarefaDAO extends DAO {
 		boolean status = false;
 		try {
 			String sql = "INSERT INTO tarefa (id, data_Limite, nome, idUsuario) "
-		               + "VALUES (" + tarefa.getId() + ", '" + tarefa.getDataLimite() + "', '" + tarefa.getNome() + "', '" + tarefa.getIdUsuario() + "');";
+		               + "VALUES ('" + tarefa.getId() + "', '" + tarefa.getDataLimite() + "', '" + tarefa.getNome() + "', '" + tarefa.getIdUsuario() + "');";
 			System.out.println(sql);
 			PreparedStatement st = conexao.prepareStatement(sql);
 			st.executeUpdate();
