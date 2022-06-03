@@ -133,9 +133,9 @@ public class Service {
 		for(int i = 0; i < tarefas.size(); i++) {
 			Tarefa t = tarefas.get(i);
 			JSONObject JsonObj = new JSONObject();
-			JsonObj.put("Id: ", t.getId());
-			JsonObj.put("Titulo: ", t.getNome());
-			JsonObj.put("Data Limite: ", t.getDataLimite());
+			JsonObj.put("Id", t.getId());
+			JsonObj.put("Titulo", t.getNome());
+			JsonObj.put("Data", t.getDataLimite());
 			
 			tarefasJSON.add(JsonObj);
 		}
