@@ -135,6 +135,7 @@ function mostrarTarefas()
             var concluida = document.createElement('input');
             concluida.setAttribute('type', 'checkbox');
             concluida.setAttribute('id', 'concluida');
+            concluida.setAttribute('onchange', `excluirTarefa(${retorno[i].id})`);
 
             var tituloTarefa = document.createElement('h3')
             tituloTarefa.setAttribute('class', 'tituloTarefa');
@@ -208,4 +209,12 @@ function adicionarTarefa()
     }
 
     fetch(`http://localhost:6700/inserirTarefa/${id}/${nome}/${dataFinal}`);
+
+    mostrarTarefas();
+}
+
+function excluirTarefa(id)
+{
+    fetch(`http://localhost:6700/deletarTarefa/${id}`);
+    mostrarTarefas();
 }
