@@ -114,55 +114,39 @@ function mostrarTarefas()
     fetch(`http://localhost:6700/getTarefas`).then((resposta) => {
         return resposta.json();
     }).then((retorno) => {
-<<<<<<< HEAD
         var parcial = document.createElement('div');
         parcial.setAttribute('id', 'tarefas');
-=======
-        let parcial = document.createElement('div');
-        parcial.setAttribute("id", "tarefas");
->>>>>>> 8c0f9d5bd250b8051da9d1c3091605d298ea6ce1
+        console.log(retorno);
         
         for(i = 0; i < retorno.length; i++)
         {
-<<<<<<< HEAD
             var tarefa = document.createElement('div');
             tarefa.setAttribute('class', 'tarefa');
 
-            var label = document.createElement('label').setAttribute('for', 'concluida');
+            var label = document.createElement('label');
+            label.setAttribute('for', 'concluida');
 
-            var concluidaImg = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/concluida.png').setAttribute('id', 'concluidaImg');
-
-            label.appendChild(concluidaImg);
-
-            var concluida = document.createElement('input').setAttribute('type', 'checkbox').setAttribute('id', 'concluida');
-
-            var tituloTarefa = document.createElement('h3').setAttribute('class', 'tituloTarefa');
-
-            tituloTarefa.innerText = retorno[i].Titulo;
-
-            var calendarioTarefa = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/calendario.png').setAttribute('id', 'calendarioTarefa');
-
-            var dataTarefa = document.createElement('h6').setAttribute('class', 'atributosTarefa');
-=======
-            let tarefa = document.createElement("div");
-            tarefa.setAttribute("class", "tarefa");
-
-            let label = document.createElement("label").setAttribute("for", "concluida");
-
-            let concluidaImg = document.createElement('img').setAttribute("src", "/Saturno/FrontEnd/imagens/concluida.png").setAttribute("id", "concluidaImg");
+            var concluidaImg = document.createElement('img');
+            concluidaImg.setAttribute('src', '/Saturno/FrontEnd/imagens/concluida.png');
+            concluidaImg.setAttribute('id', 'concluidaImg');
 
             label.appendChild(concluidaImg);
 
-            let concluida = document.createElement("input").setAttribute("type", "checkbox").setAttribute("id", "concluida");
+            var concluida = document.createElement('input');
+            concluida.setAttribute('type', 'checkbox');
+            concluida.setAttribute('id', 'concluida');
 
-            let tituloTarefa = document.createElement('h3').setAttribute("class", "tituloTarefa");
+            var tituloTarefa = document.createElement('h3')
+            tituloTarefa.setAttribute('class', 'tituloTarefa');
 
             tituloTarefa.innerText = retorno[i].Titulo;
 
-            let calendarioTarefa = document.createElement("img").setAttribute("src", "/Saturno/FrontEnd/imagens/calendario.png").setAttribute("id", "calendarioTarefa");
+            var calendarioTarefa = document.createElement('img');
+            calendarioTarefa.setAttribute('src', '/Saturno/FrontEnd/imagens/calendario.png');
+            calendarioTarefa.setAttribute('id', 'calendarioTarefa');
 
-            let dataTarefa = document.createElement("h6").setAttribute("class", "atributosTarefa");
->>>>>>> 8c0f9d5bd250b8051da9d1c3091605d298ea6ce1
+            var dataTarefa = document.createElement('h6');
+            dataTarefa.setAttribute('class', 'atributosTarefa');
 
             dataTarefa.innerText = retorno[i].Data;
 
