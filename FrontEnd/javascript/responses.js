@@ -6,8 +6,8 @@ function getBotResponse(input) {
         return "Logo acima você encontrará a área de tarefas, nela você poderá criar, editar ou apagar suas tarefas."
     }
     else if (input.includes("configurações") || input.includes("conta") || input.includes("email")
-    || input.includes("configuracoes")) {
-        return "As configurações podem ser acessadas clicando no botão encontrado no canto superior direito desta página. Lá você poderá alterar suas informações de conta, como seu email e senha."
+    || input.includes("configuracoes") || input.includes("sair") || input.includes("logout")) {
+        return "Para fazer o logout de sua conta, basta clicar no ícone no canto superior direito e clicar em sair";
     }
     else if (input.includes)
 
