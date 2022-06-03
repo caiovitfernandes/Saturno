@@ -219,7 +219,7 @@ function adicionarTarefa()
     nome.value = '';
     dataLimite.value = '';
 
-    window.location.href = "/Saturno/FrontEnd/html/paginaLogin.html";
+    window.location.reload();
 }
 
 function excluirTarefa(id)
