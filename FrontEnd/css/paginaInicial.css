@@ -281,7 +281,7 @@ Header
     position: relative;
     margin-top: 15%;
     margin-left: 20%;
-    z-index: -1;
+    z-index: 1;
 }
 
 .tarefa
@@ -290,11 +290,13 @@ Header
     padding-top: 1%;
 }
 
-#concluidaImg
+.concluidaImg
 {
     width: 3%;
     margin-left: 1%;
     display: inline;
+    z-index: 69;
+    pointer-events: all;
 }
 
 #concluida

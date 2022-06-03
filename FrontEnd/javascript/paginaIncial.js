@@ -24,8 +24,6 @@ function mostrarCaixaUsuario(){
 
 function fechaToggles()
 {
-    document.getElementById('caixaNotificacao').style.display = 'none';
-    document.getElementById('notificacaoClick').checked = false;
 
     document.getElementById('caixaUsuario').style.display = 'none';
     document.getElementById('usuarioClick').checked = false;
@@ -128,14 +126,14 @@ function mostrarTarefas()
 
             var concluidaImg = document.createElement('img');
             concluidaImg.setAttribute('src', '/Saturno/FrontEnd/imagens/concluida.png');
-            concluidaImg.setAttribute('id', 'concluidaImg');
-
+            concluidaImg.setAttribute('class', 'concluidaImg');
+            concluidaImg.setAttribute('id', retorno[i].Id);
+            //concluidaImg.setAttribute('onclick', 'excluirTarefa()');
             label.appendChild(concluidaImg);
 
             var concluida = document.createElement('input');
             concluida.setAttribute('type', 'checkbox');
             concluida.setAttribute('id', 'concluida');
-            concluida.setAttribute('onchange', `excluirTarefa(${retorno[i].id})`);
 
             var tituloTarefa = document.createElement('h3')
             tituloTarefa.setAttribute('class', 'tituloTarefa');
@@ -158,11 +156,21 @@ function mostrarTarefas()
             tarefa.appendChild(dataTarefa);
 
             parcial.appendChild(tarefa);
-        }
 
+            concluidaImg.addEventListener("mouseenter", () =>{ 
+                alert(";-;");
+                excluirTarefa(retorno[i].id);
+            });
+        }
         let divTarefas = document.getElementById("tarefas");
 
         divTarefas.innerHTML = parcial.innerHTML;
+        let imgs = document.querySelectorAll(".concluidaImg");
+        console.log(imgs);
+            Array.from(imgs).forEach((img) => {
+                console.log(img);
+            img.addEventListener('click', () => {excluirTarefa(img.id)})
+    })
     })
 }
 
@@ -217,4 +225,8 @@ function excluirTarefa(id)
 {
     fetch(`http://localhost:6700/deletarTarefa/${id}`);
     mostrarTarefas();
+}
+
+function logout(){
+    fetch(`http://localhost:6700/logOut/`);
 }
