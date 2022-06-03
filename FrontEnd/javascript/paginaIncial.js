@@ -131,11 +131,6 @@ function mostrarTarefas()
             concluida.setAttribute('type', 'checkbox');
             concluida.setAttribute('id', 'concluida');
 
-            var tituloTarefa = document.createElement('h3')
-            tituloTarefa.setAttribute('class', 'tituloTarefa');
-
-            tituloTarefa.innerText = retorno[i].Titulo;
-
             var calendarioTarefa = document.createElement('img');
             calendarioTarefa.setAttribute('src', '/Saturno/FrontEnd/imagens/calendario.png');
             calendarioTarefa.setAttribute('id', 'calendarioTarefa');
@@ -143,13 +138,18 @@ function mostrarTarefas()
             var dataTarefa = document.createElement('h6');
             dataTarefa.setAttribute('class', 'atributosTarefa');
 
+            var tituloTarefa = document.createElement('h3')
+            tituloTarefa.setAttribute('class', 'tituloTarefa');
+
+            tituloTarefa.innerText = retorno[i].Titulo;
+
             dataTarefa.innerText = retorno[i].Data;
 
             tarefa.appendChild(label);
             tarefa.appendChild(concluida);
-            tarefa.appendChild(tituloTarefa);
             tarefa.appendChild(calendarioTarefa);
             tarefa.appendChild(dataTarefa);
+            tarefa.appendChild(tituloTarefa);
 
             parcial.appendChild(tarefa);
 
