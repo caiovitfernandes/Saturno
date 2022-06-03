@@ -111,8 +111,8 @@ function marcarNotificacao()
 
 function mostrarTarefas()
 {
-    fetch(`http://localhost:6789/getTarefas/`).then((resposta) => {
-        return resposta.text();
+    fetch(`http://localhost:6789/getTarefas`).then((resposta) => {
+        return resposta.json();
     }).then((tarefa) => {
         console.log(tarefa);       
     })

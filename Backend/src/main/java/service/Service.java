@@ -126,14 +126,14 @@ public class Service {
 	}
 	
 	public String getTarefabyUserId(Request request, Response response) {
-		List<Tarefa> tarefas = tarefaDAO.getByUser(request.params(usuarioCorrente.getId()));
+		List<Tarefa> tarefas = tarefaDAO.getByUser(usuarioCorrente.getId());
 		
 		JSONArray tarefasJSON = new JSONArray();
 		
 		for(int i = 0; i < tarefas.size(); i++) {
 			Tarefa t = tarefas.get(i);
 			JSONObject JsonObj = new JSONObject();
-			JsonObj.put("Id: ", i+1);
+			JsonObj.put("Id: ", t.getId());
 			JsonObj.put("Titulo: ", t.getNome());
 			JsonObj.put("Data Limite: ", t.getDataLimite());
 			
