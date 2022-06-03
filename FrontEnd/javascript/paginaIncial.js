@@ -114,11 +114,17 @@ function mostrarTarefas()
     fetch(`http://localhost:6700/getTarefas`).then((resposta) => {
         return resposta.json();
     }).then((retorno) => {
+<<<<<<< HEAD
         var parcial = document.createElement('div');
         parcial.setAttribute('id', 'tarefas');
+=======
+        let parcial = document.createElement('div');
+        parcial.setAttribute("id", "tarefas");
+>>>>>>> 8c0f9d5bd250b8051da9d1c3091605d298ea6ce1
         
         for(i = 0; i < retorno.length; i++)
         {
+<<<<<<< HEAD
             var tarefa = document.createElement('div');
             tarefa.setAttribute('class', 'tarefa');
 
@@ -137,6 +143,26 @@ function mostrarTarefas()
             var calendarioTarefa = document.createElement('img').setAttribute('src', '/Saturno/FrontEnd/imagens/calendario.png').setAttribute('id', 'calendarioTarefa');
 
             var dataTarefa = document.createElement('h6').setAttribute('class', 'atributosTarefa');
+=======
+            let tarefa = document.createElement("div");
+            tarefa.setAttribute("class", "tarefa");
+
+            let label = document.createElement("label").setAttribute("for", "concluida");
+
+            let concluidaImg = document.createElement('img').setAttribute("src", "/Saturno/FrontEnd/imagens/concluida.png").setAttribute("id", "concluidaImg");
+
+            label.appendChild(concluidaImg);
+
+            let concluida = document.createElement("input").setAttribute("type", "checkbox").setAttribute("id", "concluida");
+
+            let tituloTarefa = document.createElement('h3').setAttribute("class", "tituloTarefa");
+
+            tituloTarefa.innerText = retorno[i].Titulo;
+
+            let calendarioTarefa = document.createElement("img").setAttribute("src", "/Saturno/FrontEnd/imagens/calendario.png").setAttribute("id", "calendarioTarefa");
+
+            let dataTarefa = document.createElement("h6").setAttribute("class", "atributosTarefa");
+>>>>>>> 8c0f9d5bd250b8051da9d1c3091605d298ea6ce1
 
             dataTarefa.innerText = retorno[i].Data;
 
@@ -149,7 +175,7 @@ function mostrarTarefas()
             parcial.appendChild(tarefa);
         }
 
-        let divTarefas = document.getElementById('tarefas');
+        let divTarefas = document.getElementById("tarefas");
 
         divTarefas.innerHTML = parcial.innerHTML;
     })
