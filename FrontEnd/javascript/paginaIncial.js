@@ -81,16 +81,12 @@ function mostraData()
     if(data != '')
     {
         document.getElementById('calendario').style.left = '76%';
-        document.getElementById('notificacaoTarefaImg').style.left = '80%';
-        document.getElementById('notificacaoClicadaImg').style.left = '80%';
-        document.getElementById('maisImgTarefa').style.marginLeft = '78%';
+        document.getElementById('maisImgTarefa').style.marginLeft = '80%';
     }
     else
     {
-        document.getElementById('calendario').style.left = '70%';
-        document.getElementById('notificacaoTarefaImg').style.left = '74%';
-        document.getElementById('notificacaoClicadaImg').style.left = '74%';
-        document.getElementById('maisImgTarefa').style.marginLeft = '72%';
+        document.getElementById('calendario').style.left = '76%';
+        document.getElementById('maisImgTarefa').style.marginLeft = '80%';
     }
 }
 

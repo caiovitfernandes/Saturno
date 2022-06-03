@@ -18,7 +18,7 @@ body{
 {
     background-color: white;
     position: absolute;
-    left: 780px;
+    right: 0px;
     top:0;
     height: 100%;
     width: 50%;
@@ -53,8 +53,8 @@ body{
     position: absolute;
     z-index: -1;
     width: 50%;
-    left: 405px;
-    top:100px;
+    left: 25%;
+    top:15%;
 }
 
 #saturnoNome
